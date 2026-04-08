@@ -1,6 +1,7 @@
 /*Variables css - Paleta de Colores*/
 /* Selector Padre */
 <<<<<<< HEAD
+<<<<<<< HEAD
 :root{
     /*Colores principales */
     --colorPrimario: #0A3D62;
@@ -26,6 +27,8 @@
     --colorError: #E74C3C;
 
 =======
+=======
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
 
 :root{
     --colorPrimario : #023850;
@@ -36,6 +39,9 @@
     --colorTitulos: #282D31;
     --colorParrafos: #53575A;
     --colorBordes: #DFE0E0;
+<<<<<<< HEAD
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
+=======
 >>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
     --zIndexNomal: 1;
     --zIndexTooltip: 10;
@@ -44,7 +50,10 @@
     --zIndexPopUp: 10000;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
 =======
 >>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
 /* Selector Universal */
@@ -59,22 +68,29 @@ body{
     display: grid;
     font-family: "Poppins", sans-serif;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 .registro{
     background: linear-gradient(135deg, var(--colorFondo), var(--colorTerciario));
     min-height: 100vh;
 =======
+=======
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
 
 }
 
 .contenedor_registro{
     background-color: var(--colorFondo);
+<<<<<<< HEAD
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
+=======
 >>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
     display: grid;
     justify-content: center;
     place-items: center;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 .formulario{
     padding: 30px;
@@ -137,6 +153,8 @@ body{
     text-decoration: underline;
 }
 =======
+=======
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
 
 .formulario{
     padding: 25px;
@@ -182,4 +200,7 @@ body{
     font-size: 18px;
 }
 
+<<<<<<< HEAD
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
+=======
 >>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
