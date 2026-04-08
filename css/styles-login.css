@@ -1,0 +1,107 @@
+:root{
+    --colorPrimario : #0A3D62;
+    --colorPrimarioHover : #07406A;
+
+    --colorSecundario: #12dbc7;
+    --colorSecundarioHover: #26B0A3; /*Para hover*/
+
+    --colorTerciario: #E0F7F5; /*Fondo suave para secciones*/
+    --colorSombras: #282D31;
+    --colorFondo: #faf7f6;
+    --colorTitulos: #282D31;
+    --colorParrafos: #53575A;
+    --colorBordes: #DFE0E0;
+    --zIndexNomal: 1;
+    --zIndexTooltip: 10;
+    --zIndexFixed: 100;
+    --zIndexModal: 1000;
+    --zIndexPopUp: 10000;
+}
+/* Selector Universal */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../img/fondou.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-card{
+    background-color: rgba(255, 255, 255, 0.225);
+    backdrop-filter: blur(4px);
+    /* border: 2px solid rgba(255, 255, 255, 0); */
+    border-radius: 1em;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+    padding: 30px;
+    display: grid;
+}
+.login__titulo{
+    color: white;
+    font-weight: bold;
+}
+.formulario{
+    margin-top: 12px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 8px;
+    border: var(--colorBordes);
+    max-width: 500px;
+    display: grid;
+    justify-content: center;
+}
+.formulario__input{
+    background-color: #f5f5f5bd;
+    border: none;
+    border-radius: 14px;
+    padding: 7px 10px 7px 13px;
+    margin: 8px 0;
+    width: 100%;
+    color: var(--colorTitulos);
+}
+
+.formulario__input:focus{
+    outline: none;
+    box-shadow: 0 0 5px var(--colorSecundarioHover);
+}
+.formulario__boton{
+    margin-top: 10px;
+    background-color: var(--colorPrimario);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    padding: 10px;
+    cursor: pointer;
+}
+.formulario__boton:hover{
+    background-color: var(--colorPrimarioHover);
+    transform: translateY(-2px);
+    transition: 0.3s;
+}
+
+.formulario__mensaje{
+    color: white;
+}
+.formulario__link{
+    text-decoration: none;
+
+    color: white;
+}
+.formulario__link:hover{
+    color: var(--colorSecundario);
+    text-decoration: underline;
+    transition: .25s;
+}

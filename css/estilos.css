@@ -1,5 +1,34 @@
 /*Variables css - Paleta de Colores*/
 /* Selector Padre */
+<<<<<<< HEAD
+<<<<<<< HEAD
+:root{
+    /*Colores principales */
+    --colorPrimario: #0A3D62;
+    --colorPrimarioHover: #07406A; /*Para hover*/
+
+    --colorSecundario: #2EC4B6;
+    --colorSecundarioHover: #26B0A3; /*Para hover*/
+
+    --colorTerciario: #E0F7F5; /*Fondo suave para secciones*/
+
+    --colorAccent: #FF9F1C; /*Para botones importantes*/
+    --colorFondo: #F8FAFC;
+    --colorCard: #FFFFFF;
+
+    --colorTitulos: #1F2933;
+    --colorParrafos: #52606D;
+
+    --colorBordes: #E4E7EB;
+    --colorSombras: rgba(0, 0, 0, 0.08);
+
+    --colorSuccess: #2ECC71;
+    --colorWarning: #F39C12;
+    --colorError: #E74C3C;
+
+=======
+=======
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
 
 :root{
     --colorPrimario : #023850;
@@ -10,12 +39,23 @@
     --colorTitulos: #282D31;
     --colorParrafos: #53575A;
     --colorBordes: #DFE0E0;
+<<<<<<< HEAD
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
+=======
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
     --zIndexNomal: 1;
     --zIndexTooltip: 10;
     --zIndexFixed: 100;
     --zIndexModal: 1000;
     --zIndexPopUp: 10000;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
+=======
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
 /* Selector Universal */
 *{
     padding: 0;
@@ -27,15 +67,94 @@ body{
     background-color: var(--colorFondo);
     display: grid;
     font-family: "Poppins", sans-serif;
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+.registro{
+    background: linear-gradient(135deg, var(--colorFondo), var(--colorTerciario));
+    min-height: 100vh;
+=======
+=======
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
 
 }
 
 .contenedor_registro{
     background-color: var(--colorFondo);
+<<<<<<< HEAD
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
+=======
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
     display: grid;
     justify-content: center;
     place-items: center;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+.formulario{
+    padding: 30px;
+    background-color: var(--colorCard);
+    border-radius: 12px;
+    border: 1px solid var(--colorBordes);
+    box-shadow: 0px 15px 35px var(--colorSombras);
+    max-width: 500px;
+    width: 100%;
+    display: grid;
+}
+.formulario__titulo{
+    color: var(--colorTitulos);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.formulario__input{
+    background-color: var(--gray-100);
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin: 8px 0;
+    width: 100%;
+    transition: all 0.45s ease;
+    color: var(--colorTitulos);
+}
+.formulario__input:focus{
+    outline: none;
+    border-color: var(--colorSecundario);
+    background-color: var(--colorCard);
+    box-shadow: 0 0 0 3px rgba(46, 196, 182, 0.15);
+}
+.boton{
+    margin-top: 15px;
+    background-color: var(--colorPrimario);
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.boton:hover{
+    background-color: var(--colorPrimarioHover);
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+}
+.registro__link{
+    margin-top: 12px;
+    color: var(--colorPrimario);
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    transition: color 0.2s ease;
+}
+.registro__link:hover{
+    color: var(--colorAccent);
+    text-decoration: underline;
+}
+=======
+=======
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
 
 .formulario{
     padding: 25px;
@@ -81,3 +200,7 @@ body{
     font-size: 18px;
 }
 
+<<<<<<< HEAD
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
+=======
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
