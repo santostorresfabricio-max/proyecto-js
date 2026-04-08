@@ -1,5 +1,6 @@
 /*Variables css - Paleta de Colores*/
 /* Selector Padre */
+<<<<<<< HEAD
 :root{
     /*Colores principales */
     --colorPrimario: #0A3D62;
@@ -24,13 +25,28 @@
     --colorWarning: #F39C12;
     --colorError: #E74C3C;
 
+=======
+
+:root{
+    --colorPrimario : #023850;
+    --colorSecundario: #14c5c8;
+    --colorTerciario: #DEEFE7;
+    --colorSombras: #282D31;
+    --colorFondo: #faf7f6;
+    --colorTitulos: #282D31;
+    --colorParrafos: #53575A;
+    --colorBordes: #DFE0E0;
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
     --zIndexNomal: 1;
     --zIndexTooltip: 10;
     --zIndexFixed: 100;
     --zIndexModal: 1000;
     --zIndexPopUp: 10000;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
 /* Selector Universal */
 *{
     padding: 0;
@@ -42,15 +58,24 @@ body{
     background-color: var(--colorFondo);
     display: grid;
     font-family: "Poppins", sans-serif;
+<<<<<<< HEAD
 }
 
 .registro{
     background: linear-gradient(135deg, var(--colorFondo), var(--colorTerciario));
     min-height: 100vh;
+=======
+
+}
+
+.contenedor_registro{
+    background-color: var(--colorFondo);
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
     display: grid;
     justify-content: center;
     place-items: center;
 }
+<<<<<<< HEAD
 .formulario{
     padding: 30px;
     background-color: var(--colorCard);
@@ -111,3 +136,50 @@ body{
     color: var(--colorAccent);
     text-decoration: underline;
 }
+=======
+
+.formulario{
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    border: var(--colorBordes);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+    max-width: 500px;
+    display: grid;
+    justify-content: center;
+}
+.titulo__formulario{
+    color: var(--colorTitulos);
+    font-weight: bold;
+}
+.input__formulario{
+    background-color: rgb(240, 240, 240);
+    border: none;
+    border-radius: 8px;
+    padding: 7px 10px;
+    margin: 8px 0;
+    width: 100%;
+}
+.btn__formulario{
+    margin-top: 10px;
+    background-color: var(--colorPrimario);
+    color: var(--colorSecundario);
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.btn__registro:hover{
+    background-color: #055273;
+    transition: 0.3s;
+}
+
+.link__registro{
+    margin-top: 10px;
+    color: var(--colorPrimario);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+>>>>>>> 71710a82fddfb7c225ceca0a810b0a19f4d9c494
