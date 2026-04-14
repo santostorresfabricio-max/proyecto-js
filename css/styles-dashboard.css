@@ -1,10 +1,11 @@
 /* VARIABLES CSS - PALETA DE COLORES */
+/* SELECTOR PADRE */
 :root {
-    --sidebar-bg: #2C3E50;
-    --sidebar-text: #ECF0F1;
+    --sidebar-bg: #2C3E50; /* Azul grisáceo oscuro corporativo */
+    --sidebar-text: #ECF0F1; /* Texto claro */
     --sidebar-hover: #34495E;
-    --content-bg: #F4F7F6;
-    --accent-color: #3498DB;
+    --content-bg: #F4F7F6; /* Gris muy sutil para el fondo */
+    --accent-color: #3498DB; /* Azul corporativo interactivo */
     --text-color: #333333;
     --border-color: #E0E0E0;
     --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -13,27 +14,30 @@
     --zIndexFixed: 100;
     --zIndexModal: 1000;
     --zIndexPopUp: 10000;
-    }
-    
-    /* RESET */
-    *{
+}
+
+/* SELECTOR UNIVERSAL */
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    }
-    
-    body {
+}
+
+body {
     background-color: var(--content-bg);
     color: var(--text-color);
-    }
-    
-    .containers {
+    font-family: "Poppins", sans-serif;
+}
+
+.containers {
     display: flex;
     min-height: 100vh;
-    }
-    
-    /* SIDEBAR */
-    .sidebar {
+}
+
+/* =========================================
+3. BARRA LATERAL (SIDEBAR)
+========================================= */
+.sidebar {
     width: 260px;
     background-color: var(--sidebar-bg);
     color: var(--sidebar-text);
@@ -41,92 +45,94 @@
     flex-direction: column;
     position: fixed;
     height: 100%;
-    }
-    
-    .sidebar-header {
+}
+
+.sidebar-header {
     padding: 25px 20px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .sidebar-header i {
+}
+
+.sidebar-header i {
     font-size: 1.6rem;
     margin-right: 12px;
-    }
-    
-    .sidebar-header h2 {
+}
+
+.sidebar-header h2 {
     font-size: 1.1rem;
     font-weight: 600;
-    }
-    
-    .sidebar-nav {
+}
+
+.sidebar-nav {
     flex: 1;
     padding: 20px 0;
-    }
-    
-    .sidebar-nav ul {
+}
+
+.sidebar-nav ul {
     list-style: none;
-    }
-    
-    .sidebar-nav li a {
+}
+
+.sidebar-nav li a {
     display: block;
     padding: 14px 20px;
     color: var(--sidebar-text);
     text-decoration: none;
     font-size: 0.95rem;
     transition: background-color 0.3s ease;
-    }
-    
-    .sidebar-nav li a:hover {
+}
+
+.sidebar-nav li a:hover {
     background-color: var(--sidebar-hover);
-    }
-    
-    .sidebar-nav li.active a {
+}
+
+.sidebar-nav li.active a {
     background-color: var(--accent-color);
     font-weight: 600;
-    }
-    
-    .sidebar-nav li i {
+}
+
+.sidebar-nav li i {
     margin-right: 10px;
     width: 20px;
     text-align: center;
-    }
-    
-    .sidebar-footer {
+}
+
+.sidebar-footer {
     padding: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .user-profile {
+}
+
+.user-profile {
     display: flex;
     align-items: center;
-    }
-    
-    .user-profile img {
+}
+
+.user-profile img {
     border-radius: 50%;
     margin-right: 12px;
-    }
-    
-    .user-info h3 {
+}
+
+.user-info h3 {
     font-size: 0.95rem;
-    }
-    
-    .user-info a {
+}
+
+.user-info a {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.8rem;
     text-decoration: none;
-    }
-    
-    /* MAIN CONTENT */
-    .main-content {
+}
+
+/* =========================================
+4. CONTENIDO PRINCIPAL Y CABECERA
+========================================= */
+.main-content {
     flex: 1;
     margin-left: 260px;
     display: flex;
     flex-direction: column;
-    }
-    
-    .top-header {
+}
+
+.top-header {
     background-color: #FFFFFF;
     padding: 15px 30px;
     display: flex;
@@ -134,37 +140,37 @@
     align-items: center;
     border-bottom: 1px solid var(--border-color);
     box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-    }
-    
-    .header-left h2 {
+}
+
+.header-left h2 {
     font-size: 1.4rem;
     color: var(--sidebar-bg);
-    }
-    
-    .header-right {
+}
+
+.header-right {
     display: flex;
     align-items: center;
-    }
-    
-    .header-right i {
+}
+
+.header-right i {
     font-size: 1.2rem;
     margin-right: 20px;
     cursor: pointer;
-    }
-    
-    .search-bar {
+}
+
+.search-bar {
     position: relative;
     margin-right: 20px;
-    }
-    
-    .search-bar input {
+}
+
+.search-bar input {
     padding: 10px 35px 10px 15px;
     border: 1px solid var(--border-color);
     border-radius: 6px;
     background-color: var(--content-bg);
-    }
-    
-    .search-bar i {
+}
+
+.search-bar i {
     position: absolute;
     right: 10px;
     top: 50%;
@@ -172,191 +178,178 @@
     font-size: 1rem;
     color: #888;
     margin-right: 0;
-    }
-    
-    .user-dropdown {
+}
+
+.user-dropdown {
     display: flex;
     align-items: center;
     cursor: pointer;
-    }
-    
-    .user-dropdown img {
+}
+
+.user-dropdown img {
     border-radius: 50%;
     margin-right: 10px;
-    }
-    
-    .user-dropdown h3 {
+}
+
+.user-dropdown h3 {
     font-size: 0.95rem;
-    }
-    
-    /* CONTENT */
-    .content-body {
+}
+
+/* =========================================
+5. CUERPO DE CONTENIDO Y TARJETAS
+========================================= */
+.content-body {
     padding: 30px;
     flex: 1;
-    }
-    
-    .card {
+}
+
+.card {
     background-color: #FFFFFF;
     border-radius: 10px;
     box-shadow: var(--card-shadow);
     margin-bottom: 25px;
-    }
-    
-    .card-header {
+}
+
+.card-header {
     padding: 20px 25px;
     border-bottom: 1px solid var(--border-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    }
-    
-    .card-header h2 {
+}
+
+.card-header h2 {
     font-size: 1.15rem;
-    }
-    
-    /* BOTONES */
-    .btn {
+}
+
+.btn {
     padding: 8px 15px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: 600;
-    }
-    
-    .btn-primary {
+}
+
+.btn-primary {
     background-color: var(--accent-color);
     color: #FFFFFF;
-    }
-    
-    .btn-secondary {
-    background-color: #95a5a6;
-    color: white;
-    }
-    
-    /* TABLA */
-    .data-table {
+}
+
+.data-table {
     width: 100%;
     border-collapse: collapse;
-    }
-    
-    .data-table th, .data-table td {
+}
+
+.data-table th,
+.data-table td {
     padding: 15px 25px;
     text-align: left;
     border-bottom: 1px solid var(--border-color);
-    }
-    
-    .data-table th {
+}
+
+.data-table th {
     font-weight: 600;
     color: #666;
-    }
-    
-    /* ESTADOS */
-    .status-badge {
+}
+
+.status-badge {
     padding: 4px 10px;
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 600;
-    }
-    
-    .status-active {
+}
+
+.status-active {
     background-color: #D4EDDA;
     color: #155724;
-    }
-    
-    .status-inactive {
+}
+
+.status-inactive {
     background-color: #E2E3E5;
     color: #383d41;
-    }
-    
-    /* ACCIONES */
-    .action-icons i {
+}
+
+.action-icons i {
     cursor: pointer;
     margin-right: 12px;
-    }
-    
-    .card-footer {
+}
+
+.card-footer {
     padding: 15px 25px;
     font-size: 0.85rem;
     color: #777;
-    }
-    
-    /* MODAL */
-    .modal-overlay {
+}
+
+/* =========================================
+ESTILOS DEL MODAL (VENTANA EMERGENTE)
+========================================= */
+.modal-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
     }
-    
     .modal-content {
     background: #fff;
     padding: 30px;
     border-radius: 12px;
     width: 100%;
-    max-width: 700px;
+    max-width: 700px; /* Ancho para acomodar dos columnas */
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     }
-    
     .modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 10px;
-    }
-    
-    .btn-cerrar-modal {
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: #888;
-    }
-    
-    .form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    }
-    
-    .modal-footer {
-    margin-top: 25px;
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    }
+margin-bottom: 20px;
+border-bottom: 1px solid var(--border-color);
+padding-bottom: 10px;
+}
+.btn-cerrar-modal {
+cursor: pointer;
+font-size: 1.5rem;
+color: #888;
+}
+.form-grid {
+display: grid;
+grid-template-columns: 1fr 1fr; /* Dos columnas */
+gap: 15px;
+}
+.modal-footer {
+margin-top: 25px;
+display: flex;
+justify-content: flex-end;
+gap: 10px;
+}
+.btn-secondary {
+background-color: #95a5a6;
+color: white;
+}
+
+.estado-badge {
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+.estado-activo {
+    background-color: #28a746d8;
+}
+.estado-inactivo {
+    background-color: #dc3546cf;
+}
+.estado-proceso {
+    background-color: #ffea0780;
+    color: black;
+}
 
 
-
-    .status-badge {
-        padding: 5px 10px;
-        border-radius: 10px;
-        color: white;
-        font-size: 12px;
-        font-weight: bold;
-    }
-    
-    .status-activo {
-        background-color: #28a745;
-    }
-    
-    .status-inactivo {
-        background-color: #dc3545;
-    }
-    
-    .status-proceso {
-        background-color: #ffc107;
-        color: black;
-    }
-
-
-    /* ESTILOS DEL MÓDULO DASHBOARD (KPIs y Gráficos) */
+ /* ESTILOS DEL MÓDULO DASHBOARD (KPIs y Gráficos) */
 .kpi-grid {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -405,4 +398,24 @@ height: 350px; /* Altura controlada para que el gráfico no se
 desborde */
 display: flex;
 justify-content: center;
+}
+
+
+/*Ocultar los modulos*/
+.ocultar-modulo {
+    display: none;
+}
+
+/*Colores para los iconos KPI*/
+.kpi-azul {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+.kpi-verde {
+    background-color: #e8f5e9;
+    color: #388e3c;
+}
+.kpi-naranja {
+    background-color: #fff3e0;
+    color: #f57c00;
 }
