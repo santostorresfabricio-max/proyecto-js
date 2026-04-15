@@ -1,36 +1,40 @@
 <?php
-// Indicar que la respuesta será en formato JSON
+session_start();
+
 header('Content-Type: application/json');
 
-// Credenciales de la Base de Datos
 $host = 'localhost';
 $db   = 'matricula';
 $user = 'root';
-$pass = ''; // Cambiar si tu MySQL tiene contraseña
+$pass = '';
 
 try {
-    // Conexión segura usando PDO
+
     $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Recibir los datos del POST (enviados por AJAX)
+    //Recibir los datos enviados por AJAX
     $usuarioIngresado = $_POST['user'] ?? '';
     $passwordIngresada = $_POST['pass'] ?? '';
 
-    // Preparar la consulta SQL para buscar al usuario
-    $sql = "SELECT id, password_hash FROM usuario WHERE username = :usuario LIMIT 1";
+    //Consulta para buscar usuario
+    $sql = "SELECT id, username, password_hash 
+            FROM usuario 
+            WHERE username = :usuario 
+            LIMIT 1";
+
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':usuario', $usuarioIngresado);
     $stmt->execute();
 
     $usuarioFila = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    // Validar si el usuario existe y si la contraseña coincide con el hash
+    // Validar usuario y contraseña
     if ($usuarioFila && password_verify($passwordIngresada, $usuarioFila['password_hash'])) {
-        
-        // Iniciar sesión en PHP (opcional pero recomendado para mantener el estado)
-        session_start();
+
+        //Crear variables de sesión
         $_SESSION['usuario_id'] = $usuarioFila['id'];
+        $_SESSION['username']   = $usuarioFila['username'];
 
         echo json_encode([
             "exito" => true,
@@ -38,7 +42,8 @@ try {
         ], JSON_UNESCAPED_UNICODE);
 
     } else {
-        // Credenciales incorrectas
+
+        //Credenciales incorrectas
         echo json_encode([
             "exito" => false,
             "mensaje" => "Usuario o contraseña incorrectos."
@@ -46,7 +51,8 @@ try {
     }
 
 } catch (PDOException $e) {
-    // Manejo de errores de base de datos
+
+    //Error de conexión a la BD
     echo json_encode([
         "exito" => false,
         "mensaje" => "Error de conexión a la BD."
